@@ -1,0 +1,61 @@
+Feature: Share what3words location
+
+Scenario:
+Given I have searched for Three words successfully
+When I have clicked Share button
+Then I should see that url with What3Words returned for location searched should be available as url
+
+Given What3Words returned from my search is populated with url
+Then there should options to share via facebook,Whatsapp,twitter
+And there should be options to copy the link generated 
+
+Given facebook is highlighted in the results section 
+When i click Facebbok icon
+Then the facebook login window should open 
+When I enter credentials successfully 
+Then the link of the location searched should be shown and i should see facebook options to share in a way that i need to 
+
+Given Whatsapp is highlighted in the results section 
+When i click whatsapp icon
+Then the Whatsapp connection window should open 
+When I have connected successfully 
+Then the link of the location searched should be shown and i should see Whatsapp contacts to share the link
+
+Given twitter is highlighted in the results section 
+When i click twitter icon
+Then the twitter login window should open 
+When I enter credentials successfully 
+Then the link of the location searched should be shown and i should see twitter options to share in a way that i need to 
+
+Given i have clicked Copy Link after the location has been returned after searching 
+When I paste it in a text file or text area
+Then the link should be pasted which was copied
+
+Given Mail icon is highlighted in the results section 
+When i click Email icon
+Then I should be presented with mail clients installed on my PC 
+Then the Email login window should open 
+When I enter credentials successfully 
+Then the link of the location searched should be shown in the new email composed
+
+Feature: Navigate what3words location
+
+Given I have searched for Three words successfully
+When I have clicked Navigate button
+Then there should options to navigate to searched location Citymapper,Google Maps,Bing Maps,Waze
+
+When I select citymapper as navigation option
+Then i should be taken to citymapper application
+And it should have selected the what3words that i had selected on what3words application
+
+When I select google maps as navigation option
+Then i should be taken to google maps application
+And it should have selected the what3words that i had selected on what3words application
+
+When I select Bing Maps as navigation option
+Then i should be taken to bing maps application
+And it should have selected the what3words that i had selected on what3words application
+
+When I select Waze as navigation option
+Then i should be taken to Waze maps application
+And it should have selected the what3words that i had selected on what3words application
